@@ -9,9 +9,6 @@
     "type": "git",
     "url": "https://git.corp.adobe.com/renaun/illustrator-mcp"
   },
-  "bin": {
-    "illustrator-mcp": "build/index.js"
-  },
   "scripts": {
     "build": "tsc",
     "start": "node build/index.js",
