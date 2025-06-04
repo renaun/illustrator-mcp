@@ -7,20 +7,15 @@
   "homepage": "https://git.corp.adobe.com/renaun/illustrator-mcp",
   "repository": {
     "type": "git",
-    "url": "https://git.corp.adobe.com/renaun/illustrator-mcp"
+    "url": "git@git.corp.adobe.com:renaun/illustrator-mcp.git"
   },
   "bin": {
-    "illustrator-mcp": "node build/index.js"
+    "illustrator-mcp": "build/index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node build/index.js",
+    "build": "tsc && shx chmod +x build/*.js",
     "prepare": "npm run build",
     "watch": "tsc --watch --preserveWatchOutput"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@git.corp.adobe.com:renaun/illustrator-mcp.git"
   },
   "keywords": [
     "mcp",
@@ -31,8 +26,11 @@
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.12.1",
+    "pino": "9.7.0"
+  },
+  "devDependencies": {
     "@types/node": "22.15.29",
-    "pino": "9.7.0",
+    "shx": "^0.4.0",
     "ts-node": "10.9.2",
     "typescript": "5.8.3"
   }
